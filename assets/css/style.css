@@ -1,0 +1,121 @@
+html {
+    box-sizing: border-box;
+}
+*, *::before, *::after {
+    box-sizing: inherit;
+}
+
+@font-face {
+    font-family: 'Manrope-Bold';
+    src: url('../fonts/Manrope-Bold.woff2') format('woff2');
+    font-style: normal;
+    font-weight: 700;
+    font-display: swap;
+}
+@font-face {
+    font-family: 'Manrope-Medium';
+    src: url('../fonts/Manrope-Medium.woff2') format('woff2');
+    font-style: normal;
+    font-weight: 500;
+    font-display: swap;
+}
+@font-face {
+    font-family: 'Manrope-Regular';
+    src: url('../fonts/Manrope-Regular.woff2') format('woff2');
+    font-style: normal;
+    font-weight: 400;
+    font-display: swap;
+}
+@font-face {
+    font-family: 'Manrope-Light';
+    src: url('../fonts/Manrope-Light.woff2') format('woff2');
+    font-style: normal;
+    font-weight: 300;
+    font-display: swap;
+}
+
+:root {
+    --color-primary: #CCE3D4;
+    --color-secondary: #136136;
+    --color-background: #f4f5f3;
+    --color-text: #1a1a1a;
+    --color-text-secondary: #F1F7F4;
+}
+
+body {
+    font-size: 20px;
+    font-family: 'Manrope-Light', sans-serif;
+    font-weight: 300;
+    background-color: var(--color-background);
+    color: var(--color-text);
+}
+
+.container {
+    max-width: 1438px;
+    margin: 0 auto;
+    padding: 24px;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+img {
+    max-width: 100%;
+}
+
+
+.header__inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: var(--color-primary);
+    padding: 32px 24px;
+    border-radius: 20px;
+}
+.menu__list {
+    display: flex;
+    gap: 50px;
+    align-items: center;
+    font-size: 16px;
+    text-transform: uppercase;
+}
+.menu__item-lang--active {
+    font-family: 'Manrope-Bold', sans-serif;
+    font-weight: 700;
+}
+.menu__item-link {
+    border-bottom: 2px solid transparent;
+    transition: border .3s ease;
+}
+.menu__item-link:hover {
+    border-bottom: 2px solid var(--color-text);
+}
+
+.header__burger {
+    width: 30px;
+    height: 30px;
+    background-color: transparent;
+    border: none;
+    display: none;
+    flex-direction: column;
+    gap: 6px;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    z-index: 5;
+}
+.header__burger span {
+    width: 100%;
+    height: 2px;
+    border-radius: 20px;
+    background-color: var(--color-text);
+    transition: transform .3s ease;
+}
+.header.active .header__burger span:nth-child(1) {
+    transform: rotate(-45deg) translate(-1px, 1px);
+}
+.header.active .header__burger span:nth-child(2) {
+    transform: rotate(45deg) translate(-5px, -5px);
+}
