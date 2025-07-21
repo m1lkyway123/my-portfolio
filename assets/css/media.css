@@ -34,4 +34,46 @@
     .menu__item-link:hover {
         border-bottom: 0;
     }
+
+    .home__intro-title {
+        font-size: 32px;
+    }
+    .home__link-title {
+        font-size: 20px;
+    }
+    .home__link-text {
+        font-size: 16px;
+    }
+    .home__contact-title {
+        font-size: 30px;
+    }
+    .home__inner {
+        grid-template-rows: 350px 250px 350px;
+    }
+    .home__intro, .home__contact {
+        grid-column: 1 / -1;
+    }
+    .home__link {
+        grid-column: span 3;
+    }
+    .home__link-img {
+        max-height: 100%;
+        margin-top: 24px;
+        height: 160px;
+    }
+}
+
+
+@media (max-width: 500px) {
+    .home__inner {
+        gap: 15px;
+        grid-template-rows: 350px 250px 250px 350px;
+    }
+    .home__intro-title {
+        padding-bottom: 24px;
+        margin: auto;
+    }
+    .home__link {
+        grid-column: 1 / -1;
+    }
 }

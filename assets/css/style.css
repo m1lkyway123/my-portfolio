@@ -53,7 +53,7 @@ body {
 .container {
     max-width: 1438px;
     margin: 0 auto;
-    padding: 24px;
+    padding: 0 24px;
 }
 
 a {
@@ -66,6 +66,9 @@ img {
 }
 
 
+.header {
+    padding: 24px 0;
+}
 .header__inner {
     display: flex;
     justify-content: space-between;
@@ -118,4 +121,101 @@ img {
 }
 .header.active .header__burger span:nth-child(2) {
     transform: rotate(45deg) translate(-5px, -5px);
+}
+
+
+.home {
+  padding-bottom: 24px;
+}
+.home__inner {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    grid-template-rows: 476px 351px;
+    gap: 24px;
+}
+.home__item {
+    padding: 24px;
+    border-radius: 20px;
+    background-color: var(--color-primary);
+    display: flex;
+    flex-direction: column;
+}
+.home__intro {
+    grid-column: span 4;
+}
+.home__intro-title {
+    font-family: 'Manrope-Bold', sans-serif;
+    font-weight: 700;
+    font-size: 56px;
+    margin-top: auto;
+    padding-bottom: 86px;
+}
+.home__link {
+    grid-column: span 2;
+    transition: transform .3s ease;
+}
+.home__link:hover {
+    transform: scale(1.05);
+}
+.home__projects {
+    padding-bottom: 34px;
+}
+.home__link-title {
+    font-size: 25px;
+    font-family: 'Manrope-Medium', sans-serif;
+    font-weight: 500;
+    position: relative;
+}
+.home__link-title::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    height: 26px;
+    width: 26px;
+    background-image: url('../images/arrow.svg');
+}
+.home__link-img {
+    border-radius: 16px;
+    margin-top: auto;
+    width: 400px;
+    height: 358px;
+    object-fit: cover;
+}
+.home__about-me {}
+.home__link-text {
+    margin-top: auto;
+    max-width: 296px;
+}
+.home__contact {
+    background-color: var(--color-secondary);
+    color: var(--color-text-secondary);
+    grid-column: span 4;
+    transition: transform .3s ease;
+}
+.home__contact:hover {
+    transform: scale(1.05);
+}
+.home__contact-suptitle {
+    position: relative;
+}
+.home__contact-suptitle::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    height: 38px;
+    width: 38px;
+    background-image: url('../images/big-arrow.svg');
+}
+.home__contact-suptitle span {
+    font-size: 15px;
+    display: inline-block;
+    width: 77px;
+}
+.home__contact-title {
+    margin-top: auto;
+    font-size: 55px;
+    font-family: 'Manrope-Medium', sans-serif;
+    font-weight: 500;
 }
