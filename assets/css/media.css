@@ -1,5 +1,13 @@
 
 @media (max-width: 768px) {
+    .suptitle {
+        font-size: 20px;
+    }
+    .text {
+        font-size: 28px;
+    }
+
+
     .logo img {
         width: 175px;
     }
@@ -33,5 +41,87 @@
     }
     .menu__item-link:hover {
         border-bottom: 0;
+    }
+
+    .home__intro-title {
+        font-size: 32px;
+    }
+    .home__link-title {
+        font-size: 20px;
+    }
+    .home__link-text {
+        font-size: 16px;
+    }
+    .home__contact-title {
+        font-size: 30px;
+    }
+    .home__inner {
+        grid-template-rows: 350px 250px 350px;
+    }
+    .home__intro, .home__contact {
+        grid-column: 1 / -1;
+    }
+    .home__link {
+        grid-column: span 3;
+    }
+    .home__link-img {
+        max-height: 100%;
+        margin-top: 24px;
+        height: 160px;
+    }
+    .about-me__item-text {
+        font-size: 16px;
+    }
+    .about-me__item-skills {
+        grid-column: 1 / 4;
+    }
+    .about-me__item-why {
+        grid-column: 4 / -1;
+    }
+
+    .contact-me .text {
+        font-size: 25px;
+    }
+}
+
+
+@media (max-width: 500px) {
+    .text {
+        font-size: 20px;
+    }
+
+
+    .home__inner {
+        gap: 15px;
+        grid-template-rows: 350px 250px 250px 350px;
+    }
+    .home__intro-title {
+        padding-bottom: 24px;
+        margin: auto;
+    }
+    .home__link {
+        grid-column: 1 / -1;
+    }
+
+    .about-me__items {
+        grid-template-rows: 350px 250px 350px;
+        gap: 15px;
+    }
+    .about-me__item-about {
+        padding-bottom: 24px;
+    }
+    .about-me__item-skills {
+        grid-column: 1 / -1;
+    }
+    .about-me__item-why {
+        grid-column: 1 / -1;
+    }
+    
+    .projects__inner {
+        gap: 15px;
+    }
+
+    .contact-me .text {
+        font-size: 15px;
     }
 }
